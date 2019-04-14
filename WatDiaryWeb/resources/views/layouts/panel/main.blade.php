@@ -46,7 +46,7 @@
                 @yield('title')
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> @lang("pages.home")</a></li>
+                <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> @lang("pages.home")</a></li>
                 @yield('breadcrumb')
             </ol>
         </section>

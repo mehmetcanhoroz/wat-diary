@@ -50,7 +50,7 @@
                     <p>@lang("dashboard.notes")</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-sticky-note"></i>
+                    <i class="fa fa-sticky-note-o"></i>
                 </div>
                 <a href="#" class="small-box-footer">@lang("dashboard.more_info") <i class="fa fa-arrow-circle-right"></i></a>
             </div>
@@ -65,7 +65,7 @@
                     <p>@lang("dashboard.work_days")</p>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-clock"></i>
+                    <i class="fa fa-clock-o"></i>
                 </div>
                 <a href="#" class="small-box-footer">@lang("dashboard.more_info") <i class="fa fa-arrow-circle-right"></i></a>
             </div>

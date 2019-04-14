@@ -28,10 +28,10 @@
             <li class="header">@lang('component.sidebar_menu_title')</li>
             <li class="active"><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i>
                     <span>@lang('pages.menu_dashboard')</span></a></li>
-            <li><a href="#"><i class="fa fa-money"></i> <span>@lang('pages.menu_income')</span></a></li>
-            <li><a href="#"><i class="fa fa-clock-o"></i> <span>@lang('pages.menu_work_day')</span></a></li>
-            <li><a href="#"><i class="fa fa-sticky-note-o"></i> <span>@lang('pages.menu_note')</span></a></li>
-            <li><a href="#"><i class="fa fa-check-square-o"></i> <span>@lang('pages.menu_todo')</span></a></li>
+            <li><a href="{{route("panel.income.index")}}"><i class="fa fa-money"></i> <span>@lang('pages.menu_income')</span></a></li>
+            <li><a href="{{route("panel.work_day.index")}}"><i class="fa fa-clock-o"></i> <span>@lang('pages.menu_work_day')</span></a></li>
+            <li><a href="{{route("panel.note.index")}}"><i class="fa fa-sticky-note-o"></i> <span>@lang('pages.menu_note')</span></a></li>
+            <li><a href="{{route("panel.todo.index")}}"><i class="fa fa-check-square-o"></i> <span>@lang('pages.menu_todo')</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
