@@ -13,10 +13,6 @@
 
 Route::get('/', function () {
     return view('panel.index');
-    return view('layouts.panel.main');
-});
-Route::get('/t', function () {
-    return view('layouts.panel.main');
 });
 
 Auth::routes();
