@@ -13,9 +13,7 @@
 
 Route::group(["as" => "panel"], function () {
 
-    Route::get('/', function () {
-        return view('panel.index');
-    });
+    Route::get('/', 'HomeController@index')->name('.index');
 
     Route::group(["prefix" => "income", "as" => ".income"], function () {
         Route::get('/', function () {
@@ -41,4 +39,4 @@ Route::group(["as" => "panel"], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

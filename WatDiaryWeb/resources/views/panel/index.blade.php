@@ -11,7 +11,7 @@
             <!-- small box -->
             <div class="small-box bg-aqua">
                 <div class="inner">
-                    <h3>150</h3>
+                    <h3>{{$counts->todo_count}}</h3>
 
                     <p>@lang("dashboard.todo")</p>
                 </div>
@@ -26,7 +26,7 @@
             <!-- small box -->
             <div class="small-box bg-green">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <h3>{{$counts->income_count}}</h3>
 
                     <p>@lang("dashboard.income")</p>
                 </div>
@@ -41,7 +41,7 @@
             <!-- small box -->
             <div class="small-box bg-yellow">
                 <div class="inner">
-                    <h3>44</h3>
+                    <h3>{{$counts->note_count}}</h3>
 
                     <p>@lang("dashboard.notes")</p>
                 </div>
@@ -56,7 +56,7 @@
             <!-- small box -->
             <div class="small-box bg-red">
                 <div class="inner">
-                    <h3>65</h3>
+                    <h3>{{$counts->work_day_count}}</h3>
 
                     <p>@lang("dashboard.work_days")</p>
                 </div>
