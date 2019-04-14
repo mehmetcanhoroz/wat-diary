@@ -1,12 +1,12 @@
-@extends('layouts.panel.main')
+@extends('panel.income.main')
 
 @section('title')
     @lang('pages.income')
 @endsection
 
-@section('breadcrumb')
-    <li class="active">Income</li>
-@endsection
+@push('breadcrumb')
+    <li class="active">@lang('pages.page_income_list')</li>
+@endpush
 
 @section('content')
 

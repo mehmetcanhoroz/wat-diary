@@ -4,10 +4,6 @@
     @lang('pages.dashboard')
 @endsection
 
-@section('breadcrumb')
-    <li class="active">Dashboard</li>
-@endsection
-
 @section('content')
     <p>Dashboard Content here graph and list</p>
     <div class="row">

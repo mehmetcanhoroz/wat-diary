@@ -1,12 +1,12 @@
-@extends('layouts.panel.main')
+@extends('panel.note.main')
 
 @section('title')
     @lang('pages.note')
 @endsection
 
-@section('breadcrumb')
-    <li class="active">Note</li>
-@endsection
+@push('breadcrumb')
+    <li class="active">@lang('pages.page_note_list')</li>
+@endpush
 
 @section('content')
 

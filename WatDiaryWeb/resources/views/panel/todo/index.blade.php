@@ -1,12 +1,12 @@
-@extends('layouts.panel.main')
+@extends('panel.todo.main')
 
 @section('title')
     @lang('pages.todo')
 @endsection
 
-@section('breadcrumb')
-    <li class="active">Todo</li>
-@endsection
+@push('breadcrumb')
+    <li class="active">@lang('pages.page_todo_list')</li>
+@endpush
 
 @section('content')
 
