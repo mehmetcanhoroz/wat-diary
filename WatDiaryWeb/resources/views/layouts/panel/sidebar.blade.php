@@ -26,12 +26,12 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">@lang('component.sidebar_menu_title')</li>
-            <li class="active"><a href="{{ url('/') }}"><i class="fas fa-tachometer-alt"></i>
+            <li class="active"><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i>
                     <span>@lang('pages.menu_dashboard')</span></a></li>
-            <li><a href="#"><i class="far fa-money-bill-alt"></i> <span>@lang('pages.menu_income')</span></a></li>
-            <li><a href="#"><i class="far fa-clock"></i> <span>@lang('pages.menu_work_day')</span></a></li>
-            <li><a href="#"><i class="far fa-sticky-note"></i> <span>@lang('pages.menu_note')</span></a></li>
-            <li><a href="#"><i class="far fa-check-square"></i> <span>@lang('pages.menu_todo')</span></a></li>
+            <li><a href="#"><i class="fa fa-money"></i> <span>@lang('pages.menu_income')</span></a></li>
+            <li><a href="#"><i class="fa fa-clock-o"></i> <span>@lang('pages.menu_work_day')</span></a></li>
+            <li><a href="#"><i class="fa fa-sticky-note-o"></i> <span>@lang('pages.menu_note')</span></a></li>
+            <li><a href="#"><i class="fa fa-check-square-o"></i> <span>@lang('pages.menu_todo')</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
