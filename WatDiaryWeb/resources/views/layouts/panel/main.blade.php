@@ -11,7 +11,8 @@
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{ asset('panel/bootstrap/dist/css/bootstrap.min.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('panel/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('panel/font-awesome/css/all.min.css') }}">
+    <script src="{{ asset('panel/font-awesome/js/all.min.js') }}"></script>
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('panel/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -37,24 +38,23 @@
 
     @include('layouts.panel.sidebar')
 
-    @yield('content')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Dashboard
+                @yield('title')
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> @lang("pages.home")</a></li>
-                <li class="active">Dashboard</li>
+                <li><a href="#"><i class="fas fa-tachometer-alt"></i> @lang("pages.home")</a></li>
+                @yield('breadcrumb')
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
-            <p>TEST</p>
+            @yield('content')
         </section>
         <!-- /.content -->
     </div>
