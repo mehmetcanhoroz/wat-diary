@@ -18,7 +18,7 @@
                     <i class="fa fa-check-square"></i>
                 </div>
                 <a href="{{route('panel.todo.index')}}" class="small-box-footer">@lang("dashboard.more_info") <i
-                        class="fa fa-arrow-circle-right"></i></a>
+                            class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -34,7 +34,7 @@
                     <i class="fa fa-dollar"></i>
                 </div>
                 <a href="{{route('panel.income.index')}}" class="small-box-footer">@lang("dashboard.more_info") <i
-                        class="fa fa-arrow-circle-right"></i></a>
+                            class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -50,7 +50,7 @@
                     <i class="fa fa-sticky-note-o"></i>
                 </div>
                 <a href="{{route('panel.note.index')}}" class="small-box-footer">@lang("dashboard.more_info") <i
-                        class="fa fa-arrow-circle-right"></i></a>
+                            class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -66,9 +66,14 @@
                     <i class="fa fa-clock-o"></i>
                 </div>
                 <a href="{{route('panel.work_day.index')}}" class="small-box-footer">@lang("dashboard.more_info") <i
-                        class="fa fa-arrow-circle-right"></i></a>
+                            class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
+    </div>
+
+    <div class="row">
+        @component('panel.components.todo.todo_list', ['column' => '6'])
+        @endcomponent
     </div>
 @endsection

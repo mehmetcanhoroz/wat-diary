@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('panel/bootstrap/dist/css/bootstrap.min.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('panel/font-awesome/css/font-awesome.min.css') }}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('panel/Ionicons/css/ionicons.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('panel/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -28,7 +30,7 @@
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    @yield('stylesheets')
+    @stack('stylesheets')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -66,10 +68,14 @@
 
 <!-- jQuery 3 -->
 <script src="{{ asset('panel/jquery/dist/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ asset('panel/jquery-ui/jquery-ui.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('panel/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('panel/js/adminlte.min.js') }}"></script>
-@yield('scripts')
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('panel/js/pages/dashboard.js') }}"></script>
+@stack('scripts')
 </body>
 </html>
