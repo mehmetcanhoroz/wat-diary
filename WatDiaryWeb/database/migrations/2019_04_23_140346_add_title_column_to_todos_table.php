@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddMessageColumnToTodosTable extends Migration
+class AddTitleColumnToTodosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddMessageColumnToTodosTable extends Migration
     public function up()
     {
         Schema::table('todos', function (Blueprint $table) {
-            $table->text('message')->after('id')->nullable();
+            $table->text('title')->after('id')->nullable();
         });
     }
 
@@ -25,9 +25,9 @@ class AddMessageColumnToTodosTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('todos', 'message')) {
+        if (Schema::hasColumn('todos', 'title')) {
             Schema::table('todos', function (Blueprint $table) {
-                $table->dropColumn('message');
+                $table->dropColumn('title');
             });
         }
     }
