@@ -20,7 +20,7 @@
         <div class="box-body">
             <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
             <ul class="todo-list">
-                <li data-id="1">
+                <li data-id="1" id="testid" class="testclas">
                     <!-- drag handle -->
                     <span class="handle">
                         <i class="fa fa-ellipsis-v"></i>

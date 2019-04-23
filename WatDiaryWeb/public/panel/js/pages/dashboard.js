@@ -7,33 +7,38 @@
 
 $(function () {
 
-  'use strict';
+    'use strict';
 
-  // jQuery UI sortable for the todo list
-  $('.todo-list').sortable({
-    placeholder         : 'sort-highlight',
-    handle              : '.handle',
-    forcePlaceholderSize: true,
-    zIndex              : 999999,
-    axis: "y",
-      change: function( event, ui ) {
-          //console.log("test1",event);
-          //console.log("test1-1",ui);
-      },
-      stop: function( event, ui ) {
-          console.log("test1",event);
-          console.log("test1-1",ui);
-      }
-  });
+    // jQuery UI sortable for the todo list
+    $('.todo-list').sortable({
+        placeholder: 'sort-highlight',
+        handle: '.handle',
+        forcePlaceholderSize: true,
+        zIndex: 999999,
+        axis: "y",
+        change: function (event, ui) {
+            //console.log("test1",event);
+            //console.log("test1-1",ui);
+        },
+        stop: function (event, ui) {
+            //console.log("test1",event);
+            //console.log("test1-1",ui);
 
-  /* The todo list plugin */
-  $('.todo-list').todoList({
-    onCheck  : function () {
-      window.console.log($(this), 'The element has been checked');
-    },
-    onUnCheck: function () {
-      window.console.log($(this), 'The element has been unchecked');
-    }
-  });
+            //console.log("list all li", $(".todo-list li"));
+            $(".todo-list li").each(function () {
+                $(this).data('id'); // This is your rel value
+            });
+        }
+    });
+
+    /* The todo list plugin */
+    $('.todo-list').todoList({
+        onCheck: function () {
+            window.console.log($(this), 'The element has been checked');
+        },
+        onUnCheck: function () {
+            window.console.log($(this), 'The element has been unchecked');
+        }
+    });
 
 });

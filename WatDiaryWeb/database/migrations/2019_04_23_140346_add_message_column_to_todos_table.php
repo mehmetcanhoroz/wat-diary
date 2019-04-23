@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIncomesTable extends Migration
+class AddMessageColumnToTodosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateIncomesTable extends Migration
      */
     public function up()
     {
-        Schema::create('incomes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::table('todos', function (Blueprint $table) {
+            $table->text('message')->after('id')->nullable();
         });
     }
 
@@ -27,6 +25,10 @@ class CreateIncomesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('incomes');
+        if (Schema::hasColumn('todos', 'message')) {
+            Schema::table('todos', function (Blueprint $table) {
+                $table->dropColumn('message');
+            });
+        }
     }
 }

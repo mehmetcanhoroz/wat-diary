@@ -16,6 +16,7 @@ class CreateWorkDaysTable extends Migration
         Schema::create('work_days', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
