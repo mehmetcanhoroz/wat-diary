@@ -6,7 +6,8 @@
         <span class="logo-mini"><img src="{{asset("logo_icon.png")}}" style="height: 33px;"
                                      alt="{{ config('app.name') }} Logo Icon"></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><img src="{{asset("logo.png")}}" style="height: 42px;" alt="{{ config('app.name') }} Logo"></span>
+        <span class="logo-lg"><img src="{{asset("logo.png")}}" style="height: 42px;"
+                                   alt="{{ config('app.name') }} Logo"></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -42,8 +43,11 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" class="btn btn-default btn-flat">@lang('auth.sign_out')</a>
-                                <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;"These credentials do not match our records>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
+                                   class="btn btn-default btn-flat">@lang('auth.sign_out')</a>
+                                <form id="frm-logout" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;" These credentials do not match our records>
                                     {{ csrf_field() }}
                                 </form>
                             </div>

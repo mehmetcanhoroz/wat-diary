@@ -13,4 +13,9 @@ class Todo extends Model
     const SUCCESS_TODO = 'success';
     const INFO_TODO = 'info';
     const DEFAULT_TODO = 'default';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, "user_id", "id");
+    }
 }

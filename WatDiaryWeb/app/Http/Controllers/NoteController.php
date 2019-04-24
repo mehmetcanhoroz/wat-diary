@@ -6,11 +6,6 @@ use App\Models\Note;
 
 class NoteController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         $notes = Note::all();

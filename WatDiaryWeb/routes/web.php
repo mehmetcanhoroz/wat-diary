@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::group(["as" => "panel"], function () {
+Route::group(["as" => "panel", 'middleware' => 'auth'], function () {
 
     Route::get('/', 'HomeController@index')->name('.index');
 
@@ -31,3 +31,6 @@ Route::group(["as" => "panel"], function () {
     });
 });
 //Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/sifre', function () {
+    return Hash::make('123456789');
+})->name('home');

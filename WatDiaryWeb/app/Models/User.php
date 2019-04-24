@@ -46,4 +46,25 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    public function todos()
+    {
+        //return $this->hasMany(Todo::class, "user_id", "id")->orderBy('sort');
+        return $this->hasMany(Todo::class, "user_id", "id");
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class, "user_id", "id");
+    }
+
+    public function incomes()
+    {
+        return $this->hasMany(Income::class, "user_id", "id");
+    }
+
+    public function workdays()
+    {
+        return $this->hasMany(WorkDay::class, "user_id", "id");
+    }
 }
