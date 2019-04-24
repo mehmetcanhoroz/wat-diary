@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class AddStatusColumnToTodosTable extends Migration
+class AddSortColumnToTodosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddStatusColumnToTodosTable extends Migration
     public function up()
     {
         Schema::table('todos', function (Blueprint $table) {
-            $table->boolean('status')->default(false)->nullable()->after('id');
+            $table->unsignedBigInteger('sort')->default(2147483647)->nullable()->after('status');
         });
     }
 
@@ -25,9 +25,9 @@ class AddStatusColumnToTodosTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('todos', 'status')) {
+        if (Schema::hasColumn('todos', 'sort')) {
             Schema::table('todos', function (Blueprint $table) {
-                $table->dropColumn('status');
+                $table->dropColumn('sort');
             });
         }
     }

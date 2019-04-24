@@ -1,9 +1,9 @@
-<li data-id="{{$todo->id}}">
+<li data-id="{{$todo->id}}" class="{{$todo->status ? 'done' : ''}}">
                       <span class="handle">
                         <i class="fa fa-ellipsis-v"></i>
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
-    <input type="checkbox" value="" name="{{$todo->id}}">
+    <input type="checkbox" value="" name="{{$todo->id}}" {{$todo->status ? 'checked' : ''}}>
     <span class="text">{{$todo->title}}</span>
     <small class="label label-{{$todo->type}}"><i class="fa fa-clock-o"></i> 4 hours</small>
     <div class="tools">

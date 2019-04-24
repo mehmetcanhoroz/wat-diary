@@ -1,4 +1,4 @@
-<section class="col-lg-7 connectedSortable">
+<section class="col-lg-{{$column_size ?? 12}} connectedSortable">
     <!-- TO DO List -->
     <div class="box box-primary">
         <div class="box-header">
@@ -7,13 +7,9 @@
             <h3 class="box-title">To Do List</h3>
 
             <div class="box-tools pull-right">
-                <ul class="pagination pagination-sm inline">
-                    <li><a href="#">&laquo;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+                @if(!empty($see_more) && $see_more)
+                    <a href="{{route('panel.todo.index')}}"><span><i class="ion ion-eye"></i> @lang('pagination.see_more')</span></a>
+                @endif
             </div>
         </div>
         <!-- /.box-header -->

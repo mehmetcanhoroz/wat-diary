@@ -73,7 +73,7 @@
     </div>
 
     <div class="row">
-        @component('panel.components.todo.todo_list', ['column' => '6', 'todos' => $todos])
+        @component('panel.components.todo.todo_list', ['column_size' => '6', 'todos' => $todos, 'see_more' => true])
         @endcomponent
     </div>
 @endsection
