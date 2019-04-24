@@ -16,5 +16,7 @@ return [
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
     'see_more' => 'See more...',
+    'view_all' => 'View all',
+    'no_data' => 'There is no any :component.'
 
 ];

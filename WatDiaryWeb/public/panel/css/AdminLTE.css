@@ -2617,7 +2617,7 @@ a:focus {
   height: 50px;
 }
 .products-list .product-info {
-  margin-left: 60px;
+  margin-left: 0;
 }
 .products-list .product-title {
   font-weight: 600;
