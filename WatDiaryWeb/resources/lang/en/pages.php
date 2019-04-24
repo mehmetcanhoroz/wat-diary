@@ -41,4 +41,5 @@ return [
     'page_todo_list' => 'List',
     'menu_todo' => 'Todo',
     'add_todo' => 'Add a Todo',
+    'box_title_todo' => 'To Do List',
 ];

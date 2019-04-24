@@ -21,6 +21,17 @@ class Todo extends Model
 
     public function scopeSorted($query)
     {
-        return $query->orderBy('sort', 'asc')->get();
+        ////SELECT * FROM `todos` WHERE user_id = 1 order by sort asc, id asc
+        return $query->orderBy('sort', 'asc')->orderBy('id', 'asc');
+    }
+
+    public function scopeNotCompleted($query)
+    {
+        return $query->where('status', 0);
+    }
+
+    public function scopeCompleted($query)
+    {
+        return $query->where('status', 1);
     }
 }

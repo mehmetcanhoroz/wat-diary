@@ -4,7 +4,7 @@
         <div class="box-header">
             <i class="ion ion-clipboard"></i>
 
-            <h3 class="box-title">To Do List</h3>
+            <h3 class="box-title">@lang('pages.box_title_todo')</h3>
 
             <div class="box-tools pull-right">
                 @if(!empty($see_more) && $see_more)
@@ -20,6 +20,9 @@
                     @component('panel.components.todo.todo_row', ['todo' => $todo])
                     @endcomponent
                 @endforeach
+                @if($todos->count() == 0)
+                    <p class="text-muted text-center">There is no any record.</p>
+                @endif
             </ul>
         </div>
         <!-- /.box-body -->

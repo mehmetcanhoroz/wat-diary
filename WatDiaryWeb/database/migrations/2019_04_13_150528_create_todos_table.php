@@ -10,7 +10,7 @@ class CreateTodosTable extends Migration
      * Run the migrations.
      *
      * @return void
-     */ //SELECT * FROM `todos` WHERE user_id = 1 order by sort asc, id asc
+     */
     public function up()
     {
         Schema::create('todos', function (Blueprint $table) {

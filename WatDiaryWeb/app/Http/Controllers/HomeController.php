@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -29,7 +30,8 @@ class HomeController extends Controller
         return view('panel.index',
             [
                 'counts' => $counts,
-                'todos' => Auth::user()->todos,
+                //'todos' => Auth::user()->todos->sorted()->get(),
+                'todos' => Auth::user()->todos()->sorted()->notCompleted()->limit(10)->get(),
                 'notes' => Auth::user()->notes,
                 'income' => Auth::user()->incomes,
                 'workdays' => Auth::user()->workdays

@@ -14,7 +14,7 @@ class AddTitleColumnToTodosTable extends Migration
     public function up()
     {
         Schema::table('todos', function (Blueprint $table) {
-            $table->text('title')->after('id')->nullable();
+            $table->string('title', 200)->after('id')->nullable();
         });
     }
 
