@@ -5,6 +5,7 @@
                       </span>
     <input type="checkbox" value="" name="{{$todo->id}}" {{$todo->status ? 'checked' : ''}}>
     <span class="text">{{$todo->title}}</span>
+<!--style="    display: block;    overflow: hidden;    white-space: nowrap;    text-overflow: ellipsis;">{{$todo->title}}</span>-->
     <small class="label label-{{$todo->type}}"><i class="fa fa-clock-o"></i> 4 hours</small>
     <div class="tools">
         <i class="fa fa-edit"></i>

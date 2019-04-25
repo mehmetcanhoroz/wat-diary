@@ -73,9 +73,9 @@
     </div>
 
     <div class="row">
-        @component('panel.components.todo.todo_list', ['column_size' => '6', 'todos' => $todos, 'see_more' => true])
+        @component('panel.components.todo.todo_list', ['column_size' => '4', 'todos' => $todos, 'see_more' => true])
         @endcomponent
-        @component('panel.components.note.note_list', ['column_size' => '6', 'notes' => $notes, 'see_more' => true])
+        @component('panel.components.note.note_list', ['column_size' => '4', 'notes' => $notes, 'see_more' => true])
         @endcomponent
 
 
