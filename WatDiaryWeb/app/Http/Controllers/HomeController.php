@@ -32,7 +32,7 @@ class HomeController extends Controller
                 'counts' => $counts,
                 //'todos' => Auth::user()->todos->sorted()->get(),
                 'todos' => Auth::user()->todos()->sorted()->notCompleted()->limit(5)->get(),
-                'notes' => Auth::user()->notes()->limit(4)->get(),
+                'notes' => Auth::user()->notes()->orderBy('id','desc')->limit(4)->get(),
                 'income' => Auth::user()->incomes,
                 'workdays' => Auth::user()->workdays
             ]);

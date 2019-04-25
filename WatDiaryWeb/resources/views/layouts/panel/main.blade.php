@@ -35,12 +35,12 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    @include('layouts.panel.header')
+@include('layouts.panel.header')
 
-    @include('layouts.panel.sidebar')
+@include('layouts.panel.sidebar')
 
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -68,6 +68,8 @@
 
 <!-- jQuery 3 -->
 <script src="{{ asset('panel/jquery/dist/jquery.min.js') }}"></script>
+<!-- jQuery Cookie -->
+<script src="{{ asset('panel/js/js.cookie.js') }}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{ asset('panel/jquery-ui/jquery-ui.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -78,7 +80,21 @@
 <script src="{{ asset('panel/js/pages/dashboard.js') }}"></script>
 
 <script>
-    //console.log($("[data-widget='collapse']"));
+    $("[data-widget='collapse']").click(function () {
+        //Find the box parent........
+        let box = $(this).parents(".box").first();
+        if (!$(this).children().hasClass("fa-plus")) {
+            Cookies.set(box.attr('id'), "hide");
+        } else {
+            Cookies.remove(box.attr('id'));
+        }
+    });
+    $(document).ready(function () {
+        const panels = Cookies.get(); //get all cookies
+        for (const panel in panels) { //<-- panel is the name of the cookie
+            $("#" + panel).boxWidget('toggle');
+        }
+    });
 </script>
 @stack('scripts')
 </body>

@@ -1,6 +1,6 @@
 <section class="col-md-{{$column_size ?? 12}} connectedSortable">
     <!-- TO DO List -->
-    <div class="box box-primary">
+    <div class="box box-primary" id="todo_list">
         <div class="box-header">
             <i class="ion ion-clipboard"></i>
 

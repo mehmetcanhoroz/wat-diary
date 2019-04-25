@@ -1,7 +1,7 @@
 
 <section class="col-md-{{$column_size ?? 12}}">
     <!-- PRODUCT LIST -->
-    <div class="box box-primary">
+    <div class="box box-primary  " id="note_list">
         <div class="box-header with-border">
             <h3 class="box-title">@lang('pages.box_title_note')</h3>
 
