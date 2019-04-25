@@ -89,12 +89,12 @@
             Cookies.remove(box.attr('id'));
         }
     });
-    $(document).ready(function () {
+    /*$(document).ready(function () {
         const panels = Cookies.get(); //get all cookies
         for (const panel in panels) { //<-- panel is the name of the cookie
-            $("#" + panel).boxWidget('toggle');
+            //$("#" + panel).boxWidget('toggle');
         }
-    });
+    });*/
 </script>
 @stack('scripts')
 </body>

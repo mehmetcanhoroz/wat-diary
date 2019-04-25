@@ -1,19 +1,24 @@
+@php
+    $hidden = false;
+    $id_box="todo_list_box";
+    if (Cookie::get($id_box) === 'hide') {
+        $hidden = true;
+    }
+@endphp
 <section class="col-md-{{$column_size ?? 12}} connectedSortable">
     <!-- TO DO List -->
-    <div class="box box-primary" id="todo_list">
+    <div class="box box-primary @if($hidden) collapsed-box @endif" id="{{$id_box}}">
         <div class="box-header">
             <i class="ion ion-clipboard"></i>
-
             <h3 class="box-title">@lang('pages.box_title_todo')</h3>
-
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                            class="fa fa-minus"></i>
+                            class="fa @if($hidden) fa-plus @else fa-minus @endif"></i>
                 </button>
             </div>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body" @if($hidden) style="display: none;" @endif>
             <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
             <ul class="todo-list">
                 @foreach ($todos as $todo)
