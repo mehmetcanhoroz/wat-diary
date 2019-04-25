@@ -1,5 +1,5 @@
 @extends('layouts.panel.main')
 
 @prepend('breadcrumb')
-    <li>@lang('pages.page_main_income')</li>
+    <li><a href="{{route('panel.income.index')}}">@lang('pages.page_main_income')</a></li>
 @endprepend

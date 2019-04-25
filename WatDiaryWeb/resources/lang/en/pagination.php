@@ -17,6 +17,8 @@ return [
     'next' => 'Next &raquo;',
     'see_more' => 'See more...',
     'view_all' => 'View all',
-    'no_data' => 'There is no any :component.'
+    'no_data' => 'There is no any :component.',
+    'no_data_todo' => 'There is no any active to do.',
+    'no_data_note' => 'There is no any note.'
 
 ];

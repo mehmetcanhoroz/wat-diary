@@ -1,6 +1,6 @@
 @extends('layouts.panel.main')
 
 @prepend('breadcrumb')
-    <li>@lang('pages.page_main_note')</li>
+    <li><a href="{{route('panel.note.index')}}">@lang('pages.page_main_note')</a></li>
 @endprepend
 
