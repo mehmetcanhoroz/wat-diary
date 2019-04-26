@@ -21,12 +21,13 @@
         <div class="box-body" @if($hidden) style="display: none;" @endif>
             <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
             <ul class="todo-list">
-                @foreach ($todos as $todo)
-                    @component('panel.components.todo.todo_row', ['todo' => $todo])
-                    @endcomponent
-                @endforeach
                 @if($todos->count() == 0)
                     <p class="text-muted text-center">@lang('pagination.no_data_todo')</p>
+                @else
+                    @foreach ($todos as $todo)
+                        @component('panel.components.todo.todo_row', ['todo' => $todo])
+                        @endcomponent
+                    @endforeach
                 @endif
             </ul>
         </div>

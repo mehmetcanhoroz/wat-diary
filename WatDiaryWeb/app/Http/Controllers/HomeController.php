@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Todo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +35,8 @@ class HomeController extends Controller
                 'todos' => Auth::user()->todos()->sorted()->notCompleted()->limit(5)->get(),
                 'notes' => Auth::user()->notes()->orderBy('id','desc')->limit(4)->get(),
                 'income' => Auth::user()->incomes,
-                'workdays' => Auth::user()->workdays
+                'workdays' => Auth::user()->workdays,
+                'announcements' => Announcement::orderBy('id','desc')->get(),
             ]);
     }
 }

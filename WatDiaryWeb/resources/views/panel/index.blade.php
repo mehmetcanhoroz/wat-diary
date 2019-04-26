@@ -12,7 +12,7 @@
                 <div class="inner">
                     <h3>{{$counts->todo_count}}</h3>
 
-                    <p>@lang("dashboard.todo")</p>
+                    <p>@lang("pages.todos")</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-check-square"></i>
@@ -28,7 +28,7 @@
                 <div class="inner">
                     <h3>{{$counts->income_count}}</h3>
 
-                    <p>@lang("dashboard.income")</p>
+                    <p>@lang("pages.incomes")</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-dollar"></i>
@@ -44,10 +44,10 @@
                 <div class="inner">
                     <h3>{{$counts->note_count}}</h3>
 
-                    <p>@lang("dashboard.notes")</p>
+                    <p>@lang("pages.notes")</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-sticky-note-o"></i>
+                    <i class="fa fa-file-text-o"></i>
                 </div>
                 <a href="{{route('panel.note.index')}}" class="small-box-footer">@lang("dashboard.more_info") <i
                             class="fa fa-arrow-circle-right"></i></a>
@@ -60,7 +60,7 @@
                 <div class="inner">
                     <h3>{{$counts->work_day_count}}</h3>
 
-                    <p>@lang("dashboard.work_days")</p>
+                    <p>@lang("pages.work_days")</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-clock-o"></i>
@@ -76,6 +76,8 @@
         @component('panel.components.todo.todo_list', ['column_size' => '4', 'todos' => $todos, 'see_more' => true])
         @endcomponent
         @component('panel.components.note.note_list', ['column_size' => '4', 'notes' => $notes, 'see_more' => true])
+        @endcomponent
+        @component('panel.components.announcement.announcement_list', ['column_size' => '4', 'announcements' => $announcements, 'see_more' => false])
         @endcomponent
 
 

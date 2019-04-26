@@ -13,9 +13,5 @@ return [
     |
     */
 
-    'todo' => 'Todo',
-    'income' => 'Income',
-    'notes' => 'Notes',
-    'work_days' => 'Work Days',
     'more_info' => 'More info',
 ];

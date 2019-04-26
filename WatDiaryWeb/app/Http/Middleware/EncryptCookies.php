@@ -14,6 +14,7 @@ class EncryptCookies extends Middleware
     protected $except = [
         //
         'todo_list_box',
-        'note_list_box'
+        'note_list_box',
+        'announcement_list_box',
     ];
 }

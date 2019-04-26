@@ -1,6 +1,6 @@
 @php
     $hidden = false;
-    $id_box="note_list_box";
+    $id_box="announcement_list_box";
     if (Cookie::get($id_box) === 'hide') {
         $hidden = true;
     }
@@ -9,8 +9,8 @@
     <!-- PRODUCT LIST -->
     <div class="box box-primary @if($hidden) collapsed-box @endif" id="{{$id_box}}">
         <div class="box-header with-border">
-            <i class="fa fa-file-text-o"></i>
-            <h3 class="box-title">@lang('pages.box_title_note')</h3>
+            <i class="fa fa-bullhorn"></i>
+            <h3 class="box-title">@lang('pages.box_title_announcement')</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
@@ -21,15 +21,14 @@
         <!-- /.box-header -->
         <div class="box-body" @if($hidden) style="display: none;" @endif>
             <ul class="products-list product-list-in-box">
-                @if($notes->count() == 0)
-                    <p class="text-muted text-center">@lang('pagination.no_data_note')</p>
+                @if($announcements->count() == 0)
+                    <p class="text-muted text-center">@lang('pagination.no_data_announcement')</p>
                 @else
-                    @foreach ($notes as $note)
-                        @component('panel.components.note.note_row', ['note' => $note])
+                    @foreach ($announcements as $announcement)
+                        @component('panel.components.announcement.announcement_row', ['announcement' => $announcement])
                         @endcomponent
                     @endforeach
                 @endif
-
             </ul>
         </div>
         <!-- /.box-body -->
