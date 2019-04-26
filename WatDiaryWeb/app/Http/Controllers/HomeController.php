@@ -36,7 +36,7 @@ class HomeController extends Controller
                 'notes' => Auth::user()->notes()->orderBy('id','desc')->limit(4)->get(),
                 'income' => Auth::user()->incomes,
                 'workdays' => Auth::user()->workdays,
-                'announcements' => Announcement::orderBy('id','desc')->get(),
+                'announcements' => Announcement::orderBy('id','desc')->limit(3)->get(),
             ]);
     }
 }

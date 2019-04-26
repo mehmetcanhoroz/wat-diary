@@ -17,6 +17,7 @@ class CreateAnnouncementsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title', 200);
             $table->text('content')->nullable();
+            $table->string('type', 15)->nullable()->default('announcement');
             $table->timestamps();
         });
     }
